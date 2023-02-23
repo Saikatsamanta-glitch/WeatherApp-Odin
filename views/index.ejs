@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App 🌡</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/009/268/713/original/yellow-emoji-face-reaction-illustration-free-png.png" type="image/x-icon">
+</head>
+<body>
+    <h1 align="center" class="heading"> Welcome to Awesome <span class="text-primary">Weather App 🚀</span>  </h1>
+
+    <div class="main">
+        <div class="left">
+            <form method="post" action="/city"  >
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h3>Temperature 🔆</h3>
+                            </td>
+                            <td>
+                                <h3 align="center"> 
+                                    <% if(data){ %>
+                                    <%=((data.temp-273.15).toFixed(2))%> 
+                                    <%} %>
+                                    
+                                    <sup>o</sup>C </h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Pressure 🔮</h3>
+                            </td>
+                            <td>
+                                <h3 align="center"> 
+                                    <% if(data){ %>
+                                        <%=(data.pressure)%> 
+                                        <%} %>
+                                     </h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Humidity 🌱</h3>
+                            </td>
+                            <td>
+                                <h3 align="center">
+
+                                    <% if(data){ %>
+                                    <%} %>
+
+                                     </h3>
+                            </td>
+                        </tr>
+                        <tr class="inp">
+                            <td>
+                                <input type="text" placeholder="Enter your city" name="city" >
+                            </td>
+                            <td>
+                                <button type="submit" >Search 🔍</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+        </div>
+
+
+
+        <div class="right">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_r2gr83m9.json"  background="transparent"  speed="1"  style="width: 600px; height: 500px;"  loop  autoplay></lottie-player>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
+
+<!-- https://d8it4huxumps7.cloudfront.net/uploads/images/150x150/622995d68a11f_unnamed.png -->
